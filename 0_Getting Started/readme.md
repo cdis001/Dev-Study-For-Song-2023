@@ -73,6 +73,72 @@
       - 강남역의 주소는 "서울 강남구 강남대로 396"
       - '우리 서울특별시 강남구 강남대로 396에서 만나자!' 라고 하는것은 비효율적
       - '우리 강남역에서 만나자' 라고 하는것과 비슷한 개념
+  - URI
+    - Uniform Resource Identifier
+    - 웹 사이트의 주소
+    - DNS와 비슷해보이지만, URI의 영역이 좀 더 큼
+    - 예시
+      - https://www.youtube.com/shorts/CbauMbMVebc?feature=share
+        - 위와 같은 주소가 있을 때
+        - DNS
+          - www.youtube.com
+          - 해당 주소값에 유튜브의 IP 주소가 매핑되어 있음
+        - URI
+          - https://www.youtube.com/shorts/CbauMbMVebc?feature=share
+          - 위와 같이 웹 사이트 전체 주소가 URI
+  - URL
+    - Uniform Resource Locator
+    - URI의 한 종류
+    - URI와 URL의 차이
+      ![URI](./URI.png)
+      > https://developer.mozilla.org/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL
+        - 이 주소는 URL
+      > https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#basics_anatomy_of_a_url
+        - 이 주소는 URI
+  - API
+    - Application Programming Interface
+    - 서로 다른 소프트웨어에 정보나 신호를 주고받는 시스템
+    - UI는 사용자와 컴퓨터간의 정보를 연결하지만, API는 컴퓨터나 소프트웨어끼리의 정보를 연결한다는 차이가 있음
+    - 다양한 API 프로토콜이 있으나 대표적인 REST API 하나만 보도록 하자..
+  - REST API
+    - Representational State Transfer
+    - HTTP를 기반으로 통신하는 다양한 API 프로토콜 중 하나
+    - 구성 요소
+      - 자원
+        - Resource
+        - API를 통해 가져오는 서비스를 구별하는 요소
+        - 대부분 URL를 이용하여 구별
+        - 어디에서 해당 API를 가져올지에 대한 주소값
+      - 행위
+        - Verb
+        - 클라이언트가 서버를 통해 어떤 행동을 할 것인지 요청하는 요소
+        - HTTP Method
+          - GET
+            - 데이터를 단순히 요청만 하는 과정
+            - 데이터를 가져오는 역할만 함
+            - https://youtu.be/rIr5Y_5Xk98?si=ZNB4WFZf_Imc4Ill&t=257
+              - 위 웹사이트 주소에 들어가면 유튜브 영상이 나오는데, 해당 데이터를 가져오는 GET 요청을 통해 해당 영상을 볼 수 있음
+          - POST
+            - 새로운 데이터를 만드는 요청
+            - 유튜브 페이지에 댓글을 달 경우, POST 요청을 사용하여 새로운 댓글을 추가
+          - PATCH
+            - 특정 데이터의 부분만 수정하는 요청
+          - PUT
+            - 특정 데이터의 전체를 수정하는 요청
+            - PATCH와 PUT는 개념적으로는 구별하지만, 대부분은 PUT 요청을 사용함
+          - DELETE
+            - 특정 데이터를 삭제하는 요청
+      - 표현
+        - Representations
+        - 클라이언트와 서버 간에 교환되는 데이터의 형태
+        - 주로 JSON 형식을 사용
+        ```json
+        {
+          "id": 1,
+          "name": "song",
+          "email": "song@test.com"
+        }
+        ```
   - 프레임워크
     - 소프트웨어 개발을 위한 기본 구조
     - 요리를 할 때, 밀키트와 같은 느낌
