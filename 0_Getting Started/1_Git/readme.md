@@ -3,6 +3,8 @@
 ## git 구조도
 ![git_structure](./git_structure.png)
 
+## 파일 수정!
+
 ## 간단 사용법
 1. add
      - 새로운 파일을 추가할 수 있습니다.
